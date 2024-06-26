@@ -73,6 +73,12 @@ VALUES (2, 2, '20/06/2024', 'Avaliação nutricional e plano alimentar');
 INSERT INTO Consulta (ID_Nutricionista, ID_Paciente, Data_Consulta, Observacoes)
 VALUES (3, 3, '24/06/2024', 'Orientação nutricional para perda de peso');
 
+--ex4
+ALTER TABLE Consulta
+ADD FOREIGN KEY (ID_Paciente) REFERENCES Paciente(ID_Paciente),
+ADD FOREIGN KEY (ID_Nutricionista) REFERENCES Nutricionista(ID_Nutricionista);
+
+
 --ex6
 -- Relaciona consulta 1 com paciente 1 e nutricionista 1
 UPDATE Consulta
